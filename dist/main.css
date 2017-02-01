@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-image: url(../bodyBkg.jpg);
+    color: #000;
+    font-size: 200%;
+}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.headline,
+.headline:link,
+.search,
+.search:link{
+    text-decoration: none;
+    color: #000;
+    transition: linear color 0.2s;
+}
+.headline:hover,
+.headline:active,
+.search:hover,
+.search:active{
+    text-decoration: none !important;
+    color: #462aff;
+}
+
+.container{
+    width: 95%;
+    padding: 50px;
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(../containerBkg.jpg);
+    background-position: center;
+}
+th, td, tr{
+    padding: 15px;
+}
+
+.link{
+    background-color: #000;
+}
+
+table td,
+.neighbor{
+    cursor: pointer;
+}
+
+article {
+    font-size: 120%;
+}
+
+button{
+    background-color: #0645ff;
+    padding: 10px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px){
+    .flag-container,
+    .countryName,
+    .headline,
+    .search{
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+}
+
+.mapHolder{
+    text-align: center;
+}
+
+.flag{
+    height: 70px;
+    width: 120px;
+}
+
+p, span{
+    padding: 10px;   
+}
+
+
+
+.flag-container{
+    text-align: right;
+}
+
+.loading {
+  position:relative;
+  height:100vh;
+  transition: all linear 0.2s;
+}
+
+.loading:before {
+  position:absolute;
+  content:"";
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  z-index:1000;
+  background:rgba(0, 0, 0, 0.95) url('http://i.giphy.com/HVr4gFHYIqeti.gif') no-repeat center center;
+}
+
+.search{
+    text-align: right;
+}

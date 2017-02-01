@@ -1,0 +1,22 @@
+<div class="fluid-container">
+    <div class="row">
+        <div class="col-sm-6">
+        <h2 class="countryName">{{singleCountry.countryName}}</h2></div>
+        <div class="col-sm-6 flag-container"><img ng-src="{{capitalFacts.flag}}" class="flag"></div>
+        
+    </div>
+</div>
+    
+<div class="factTable">
+    <p><strong>Continent:</strong>&nbsp; {{singleCountry.continent}}</p>
+    <p><strong>Capitol:</strong>&nbsp; {{singleCountry.capital}}</p>
+    <p><strong>Population:</strong>&nbsp; {{singleCountry.population | number}} People</p>
+    <p><strong>Capitol's Population:</strong>&nbsp; {{capitalFacts.population | number}} People</p>
+    <p><strong>Capitol's Location:</strong>&nbsp; LAT &#8210; {{capitalFacts.lat}} &nbsp; LONG &#8210; {{capitalFacts.lng}}</p>
+    <br>
+    <p class="mapHolder"><img ng-src="{{capitalFacts.map}}"></p><br>
+    <br>
+    <p><strong>Neighboring Countries</strong></p><br>
+    <span class="neighbor" ng-if="!hasNeighbor">No Neighbors; This Country is Isolated</span>
+    <span class="neighbor" ng-repeat="neighbor in neighbors" ng-click="toDetails(neighbor.countryName)">{{neighbor.countryName}} &emsp;</span>
+</div>
